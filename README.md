@@ -1,6 +1,5 @@
 # rinko
 rinko is a trivial source code checker (especially for Android application development).
-This tool is named after the character in SHIROBAKO.
 
 ## Install
 
