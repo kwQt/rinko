@@ -16,8 +16,9 @@ func cmdComment(c *cli.Context) error {
 	results := map[string]string{}
 
 	suffix := c.String("name")
+	ext := c.String("extension")
 
-	err := filepath.Walk("./", checkComments(suffix, results))
+	err := filepath.Walk("./", checkComments(suffix, ext, results))
 	if err != nil {
 		return err
 	}
@@ -47,9 +48,9 @@ func cmdComment(c *cli.Context) error {
 	return nil
 }
 
-func checkComments(suffix string, results map[string]string) filepath.WalkFunc {
+func checkComments(suffix string, ext string, results map[string]string) filepath.WalkFunc {
 	return func(path string, info os.FileInfo, err error) error {
-		if info.IsDir() || !strings.Contains(info.Name(), suffix+".") {
+		if info.IsDir() || !strings.Contains(info.Name(), suffix+"."+ext) {
 			return nil
 		}
 
