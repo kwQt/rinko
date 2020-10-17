@@ -34,7 +34,7 @@ func checkExtensionFunctions(name string, results *[]string) filepath.WalkFunc {
 		}
 
 		if name == "ALL" {
-			name = ""
+			name = `\w*`
 		}
 		regex := `fun(\s|(\s<(\s|\w|,|:)*>\s))` + name + `(<(\s|\w|,|<|>)*>)?\.`
 
