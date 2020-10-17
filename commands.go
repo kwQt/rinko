@@ -19,8 +19,7 @@ var commands = []*cli.Command{
 		Usage:  "lists files including extension function",
 		Action: cmdExtension,
 		Flags: []cli.Flag{
-			&cli.StringFlag{Name: "name", Value: "ALL", Aliases: []string{"t"}, Usage: "specify receiver type"},
-			&cli.BoolFlag{Name: "all", Value: false, Aliases: []string{"a"}, Usage: "display all results"},
+			&cli.StringFlag{Name: "name", Value: "ALL", Usage: "specify receiver type"},
 		},
 	},
 }
