@@ -15,7 +15,7 @@ var commands = []*cli.Command{
 	},
 	{
 		Name:   "extfunc",
-		Usage:  "lists files including extension function",
+		Usage:  "list all Kotlin files including extension function",
 		Action: cmdExtension,
 		Flags: []cli.Flag{
 			&cli.StringFlag{Name: "name", Value: "ALL", Usage: "specify receiver type"},
