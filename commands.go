@@ -14,8 +14,7 @@ var commands = []*cli.Command{
 		},
 	},
 	{
-		Name:   "extension function",
-		Aliases: []string{"extfunc"},
+		Name:   "extfunc",
 		Usage:  "lists files including extension function",
 		Action: cmdExtension,
 		Flags: []cli.Flag{
